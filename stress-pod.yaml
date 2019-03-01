@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: stress-pod
+  labels:
+    component: linux
+spec:
+  containers:
+    - name: stress-app
+      image: fynbab/container-load
+      ports:
+        - containerPort: 22
